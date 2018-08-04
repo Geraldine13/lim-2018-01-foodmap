@@ -10,6 +10,6 @@ const splash = () => {
 function initMap() {
   const  map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: -11.853, lng: -77.0383 },
-    zoom: 8
+    zoom: 18
   });
 }
