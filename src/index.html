@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FoodMap</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Marck+Script" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="splash()">
+  <div id="loader"></div>
+  <div id="container" class="hidden">
+    <header>
+      <div class="title-seard">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">FoodMap</a>
+          </div>
+        </nav>        
+      </div>
+
+      <nav>
+        <div class="nav-wrapper">
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="map" class="container-map">
+        <h2>Aquí irá el mapa</h2>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <div class="col s12">
+              <img class="materialboxed" width="650" src="">
+            </div>
+            <div class="col s6">
+              <img class="responsive-img" src="">
+            </div>
+            <div class="col s6">
+              <img class="responsive-img" src="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2018 Copyright - Geraldine Saco</div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwAIOdOmpLeIZrpIJvmMxQ_Qw_AmneEX4&callback=initMap"
+  type="text/javascript"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
