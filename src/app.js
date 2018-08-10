@@ -72,10 +72,93 @@ function initMap () {
     alert(error);
   }
 
-
-
+  getFood();
 }
 
 
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var elems = document.querySelectorAll('.modal');
+//   var instances = M.Modal.init(elems);
+// });
+
+const filterFood = (stringSearch, dataFood) => {
+  const foodFilter = dataFood.filter(food => {
+    return food.name.toLowerCase().indexOf(stringSearch.toLowerCase()) > -1;
+  })
+  return foodFilter;
+}
+
+const addFood = () => {
+  const data = JSON.parse(event.currentTarget.responseText);
+  //console.log(data);
+  
+  const searchFood = document.getElementById('search');
+
+  searchFood.addEventListener('keyup', () => {
+    const search = searchFood.value;
+    const showFood = filterFood(search, data);
+    return showFood;
+    console.log(showFood);
+
+    // console.log(search);
+    // console.log(dataFood);  
+})
+
+
+  const showFood = document.getElementById('container-food');
+  showFood.innerHTML = '';
+  Object.keys(data).forEach((id) => {
+    const food = data[id];
+    //console.log(food);
+    showFood.innerHTML += `
+    <div class="row" id=${id}>
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content black-text">
+            <h4>${food.name}</h4>
+            <p>Dirección: ${food.address}</p>
+            <p>Tel. reserva: ${food.phone}</p>
+            <p>Tipo de comida: ${food.typeFood}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    `
+  })
+  // <!-- Modal Structure -->
+  // <div id="modal1" class="modal">
+  //     <div class="modal-content">
+  //     <a href="#modal1" class="card-title modal-trigger">${food.name}</a>
+        
+  //     </div>
+  //     <div class="modal-footer">
+  //       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+  //     </div>
+  // </div>  
+  // const inputFood = document.getElementById('search');
+  // filterFood(inputFood,data);
+  // console.log(filterFood);
+}
+
+
+
+
+const handleError = () => {
+  alert('Se ha presentado un error');
+}
+
+
+const getFood = () => {
+  const foodRequest = new XMLHttpRequest();
+  foodRequest.open('GET', `data.json`);
+  foodRequest.onload = addFood;
+  foodRequest.onerror = handleError;
+  foodRequest.send();
+}
 
 

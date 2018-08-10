@@ -1,0 +1,51 @@
+[
+    {
+        "name" : "Sabores Peruanos",
+        "address" : "Av. Benavides 2392 Miraflores",
+        "phone" : "449-2145",
+        "typeFood" : "Criolla",
+        "district" : "Miraflores"
+    },
+
+    {
+        "name" : "El Rincón que no conoces",
+        "address" : "Calle Bernardo Alcedo N° 363 – LINCE",
+        "phone" : "923 520 174",
+        "typeFood" : "Criolla",
+        "district" : "Lince"
+    },
+
+    {
+        "name" : "El italiano",
+        "address" : "Jr. E.Leon Garcia 376 Urb. Sta.Catalina, La Victoria",
+        "phone" : "-",
+        "typeFood" : "Pastas y pizzas",
+        "district" : "La Victoria"
+    },
+
+    {
+        "name" : "La linterna",
+        "address" : "Av. Grau 689 Barranco",
+        "phone" : "-",
+        "typeFood" : "Pastas y pizzas",
+        "district" : "Barranco" 
+    },
+
+    {
+        "name" : "El cortijo",
+        "address" : "Montero Rosas 121 Barranco",
+        "phone" : "-",
+        "typeFood" : "Carnes y Parrilla",
+        "district" : "Barranco" 
+    },
+
+    {
+        "name" : "La Bistecca",
+        "address" : "Av. Conquistadores 1048 San Isidro",
+        "phone" : "-",
+        "typeFood" : "Carnes y Parrilla",
+        "district" : "San Isidro" 
+    }
+
+]
+
