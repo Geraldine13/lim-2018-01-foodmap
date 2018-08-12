@@ -62,3 +62,13 @@ body{
   border: solid 5px;
   border-color: black;
 }
+
+.select-district {
+  display: inline-block; 
+  width: 50%; 
+}
+
+.select-type {
+  float: right;
+  width: 50%;
+}
