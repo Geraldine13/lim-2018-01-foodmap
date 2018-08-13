@@ -5,7 +5,7 @@ window.onload = () => {
     }, 2000);
 }
 
-function initMap () {
+window.initMap = () => {
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((ubiety) => {
@@ -48,15 +48,14 @@ const getFood = (callback) => {
 }
 
 const locationFood = (latitude, longitude) => {
-  const myPosition = new google.maps.LatLng(latitude, longitude);
-
+  const positionFood = new google.maps.LatLng(latitude, longitude);
   map = new google.maps.Map(document.getElementById ('map'), {
-    center: myPosition,
+    center: positionFood,
     zoom: 18
   });
 
   const myMarker = new google.maps.Marker({
-    position: myPosition,
+    position: positionFood,
     map: map
   });
 }
@@ -101,11 +100,31 @@ const listFood = () => {
   })
 }
 
-const filterRestaurant = (foods, search) => {
-  let filterFoods = foods.filter((food) => { 
-  return food.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
-  });
-  return filterFoods;
+const filterRestaurant = (foods, search, filterOption) => {
+  let filterFoods;
+  switch (filterOption) {
+    case "name" :
+      filterFoods = foods.filter((food) => { 
+        return food.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
+      });
+      return filterFoods;
+      break;
+    
+    case "district" :
+      filterFoods = foods.filter((city) => { 
+        return city.district === search;
+      });
+      return filterFoods;
+      break;
+
+    case "type" :
+      filterFoods = foods.filter((type) => {
+      return type.typeFood === search;
+      });
+      return filterFoods;
+      break;
+  }
+  
 } 
 
 const filterFood = () => {
@@ -117,24 +136,29 @@ const filterFood = () => {
 
     searchFood.addEventListener('keyup', () => {
       let search = searchFood.value;
-      let selectFood = filterRestaurant(dataFood, search);
+      let selectFood = filterRestaurant(dataFood, search, "name");
       dataTable(selectFood);
     })
 
     filterDistrict.addEventListener('change', (e) => {
       let district = e.target.value;
-      let selectDistrict = dataFood.filter((city) => { 
-        return city.district === district;
-      });
-      dataTable(selectDistrict);
+      if (district != '') {
+        let selectDistrict = filterRestaurant(dataFood, district, "district");
+        dataTable(selectDistrict);
+      } else {
+        listFood();
+      }
+      
     })
 
     filterType.addEventListener('change', (e) => {
       let typeFood = e.target.value;
-      let selectType = dataFood.filter((type) => {
-        return type.typeFood === typeFood;
-      })
-      dataTable(selectType);
+      if (typeFood != '') {
+        let selectType = filterRestaurant(dataFood, typeFood, "type");
+        dataTable(selectType);
+      } else {
+        listFood();
+      }
     })
   })
 }
