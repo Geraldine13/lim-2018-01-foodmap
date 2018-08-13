@@ -2,49 +2,67 @@
     {
         "name" : "Sabores Peruanos",
         "address" : "Av. Benavides 2392 Miraflores",
+        "image" : "https://lh4.googleusercontent.com/--1BC0uTGC8A/AAAAAAAAAAI/AAAAAAAAAaA/nGCPgCXoLco/photo.jpg",
         "phone" : "449-2145",
         "typeFood" : "Criolla",
-        "district" : "Miraflores"
+        "district" : "Miraflores",
+        "latitude" : "-12.12806",
+        "longitude": "-77.00784"
     },
 
     {
         "name" : "El Rincón que no conoces",
         "address" : "Calle Bernardo Alcedo N° 363 – LINCE",
+        "image" : "https://media-cdn.tripadvisor.com/media/photo-s/07/55/13/5c/el-rincon-que-no-conoces.jpg",
         "phone" : "923 520 174",
         "typeFood" : "Criolla",
-        "district" : "Lince"
+        "district" : "Lince",
+        "latitude": "-12.08426",
+        "longitude": "-77.03289"
     },
 
     {
-        "name" : "El italiano",
+        "name" : "El Italiano",
         "address" : "Jr. E.Leon Garcia 376 Urb. Sta.Catalina, La Victoria",
+        "image": "https://lh3.googleusercontent.com/p/AF1QipNcktMft7-VUDxx1stP7GTaKywIoxIMcYnMsOFN=s1600-w400",
         "phone" : "-",
         "typeFood" : "Pastas y pizzas",
-        "district" : "La Victoria"
+        "district" : "La Victoria",
+        "latitude" : "-12.08511",
+        "longitude" : "-77.02202"
     },
 
     {
-        "name" : "La linterna",
+        "name" : "La Linterna",
         "address" : "Av. Grau 689 Barranco",
+        "image": "https://grupoas.com.pe/wp-content/uploads/2015/10/la-linterna.jpg",
         "phone" : "-",
         "typeFood" : "Pastas y pizzas",
-        "district" : "Barranco" 
+        "district" : "Barranco",
+        "latitude" : "-12.12486",
+        "longitude" : "-77.03476"
     },
 
     {
-        "name" : "El cortijo",
-        "address" : "Montero Rosas 121 Barranco",
-        "phone" : "-",
+        "name" : "El Hornero",
+        "address" : "Av. Paseo de la República 6500 Barranco",
+        "image" : "https://content.emarket.pe/uploads/sites/22/2015/03/1400000015422.jpg",
+        "phone" : "247-4646",
         "typeFood" : "Carnes y Parrilla",
-        "district" : "Barranco" 
+        "district" : "Barranco",
+        "latitude" : "-12.13519",
+        "longitude" : "-77.01990"
     },
 
     {
         "name" : "La Bistecca",
         "address" : "Av. Conquistadores 1048 San Isidro",
-        "phone" : "-",
+        "image" : "https://static.wixstatic.com/media/a7ea1a_5aaf479b24e44d01b31046682f4e8345.jpg/v1/fill/w_280,h_190,al_c,q_80,usm_0.66_1.00_0.01/a7ea1a_5aaf479b24e44d01b31046682f4e8345.webp",
+        "phone" : "421-7555",
         "typeFood" : "Carnes y Parrilla",
-        "district" : "San Isidro" 
+        "district" : "San Isidro",
+        "latitude" : "-12.10659",
+        "longitude": "-77.03742"
     }
 
 ]
